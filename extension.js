@@ -102,7 +102,7 @@
             if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
             if (!bot.commands.executable(this.rank, chat)) return void (0);
             else {
-              API.sendChat("Aselia bot will go down for briff maintanace in the next 5 minutes.");
+              API.sendChat("Aselia bot will go down for brief maintanace in the next 5 minutes.");
             }
           }
         };
