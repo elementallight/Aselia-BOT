@@ -61,8 +61,8 @@
             if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
             if (!bot.commands.executable(this.rank, chat)) return void (0);
             else {
-              API.sendChat("NO !!! ITEMS !!!! EVERRRRRRRRRRR!!!!!!");
-			  API.sendChat("https://i.imgur.com/IOdibFg.png");
+              API.sendChat("NO !!! ITEMS !!!! EVERRRRRRRRRRR!!!!!!" + "https://i.imgur.com/IOdibFg.png");
+
             }
           }
         };
