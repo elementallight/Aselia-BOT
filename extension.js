@@ -24,12 +24,6 @@
           window.bot.chatUtilities.spam.push(spamWords[i]);
         }
         
-        setTimeout(informationFunction, 3000);
-        
-        function informationFunction {
-           API.sendChat("Thank you for joining us at Aselia!");
-        }
-
         // Example code for a bot command:
         bot.commands.ramenCommand = {
           command: 'ramen',  // The command to be called. With the standard command literal this would be: !bacon
@@ -150,3 +144,9 @@
     $.getScript("https://rawgit.com/basicBot/source/master/basicBot.js", extend);
 
 }).call(this);
+
+ setTimeout(informationFunction, 3000);
+        
+        function informationFunction {
+           API.sendChat("Thank you for joining us at Aselia!");
+        }
