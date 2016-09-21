@@ -26,14 +26,14 @@
 
         // Example code for a bot command:
         bot.commands.baconCommand = {
-          command: 'bacon',  // The command to be called. With the standard command literal this would be: !bacon
+          command: 'ramen',  // The command to be called. With the standard command literal this would be: !bacon
           rank: 'user', // Minimum user permission to use the command
           type: 'exact', // Specify if it can accept variables or not (if so, these have to be handled yourself through the chat.message
           functionality: function (chat, cmd) {
             if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
             if (!bot.commands.executable(this.rank, chat)) return void (0);
             else {
-              API.sendChat("/me Bacon!!!");
+              API.sendChat("You eat Raine's cooking...You dont survive.");
             }
           }
         };
