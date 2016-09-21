@@ -23,6 +23,12 @@
         for (var i = 0; i < spamWords.length; i++) {
           window.bot.chatUtilities.spam.push(spamWords[i]);
         }
+        
+        setTimeout(informationFunction, 3000);
+        
+        function informationFunction {
+           API.sendChat("Thank you for joining us at Aselia!");
+        }
 
         // Example code for a bot command:
         bot.commands.ramenCommand = {
