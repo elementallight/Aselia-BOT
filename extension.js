@@ -18,11 +18,6 @@
 
         //Extend the bot here, either by calling another function or here directly.
 
-        function informationFunction {
-           API.sendChat("Thank you for joining us at Aselia!");
-        }
-
-
         // You can add more spam words to the bot.
         var spamWords = ['spam1', 'spam2', 'spam3', 'spam4'];
         for (var i = 0; i < spamWords.length; i++) {
@@ -70,24 +65,6 @@
           }
         };
         
-        bot.commands.infotimerCommand = {
-          command: 'infti',  // The command to be called. With the standard command literal this would be: !bacon
-          rank: 'bouncer', // Minimum user permission to use the command
-          type: 'exact', // Specify if it can accept variables or not (if so, these have to be handled yourself through the chat.message
-          functionality: function (chat, cmd) {
-            if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-            if (!bot.commands.executable(this.rank, chat)) return void (0);
-            else {
-                setTimeout(informationFunction, 3000);
-              API.sendChat("Auto Info Started!");
-            }
-          }
-        };
-         
-        
-        
-        
-
         // Load the chat package again to account for any changes
         bot.loadChat();
 
