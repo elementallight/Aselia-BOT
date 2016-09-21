@@ -34,9 +34,10 @@
             if (!bot.commands.executable(this.rank, chat)) return void (0);
             else {
 			var from = chat.un;
-            var msg = '[@' + from + '] ';
-			return API.sendChat(msg);
+			else{
+              API.sendChat( "@" + from + " " + "You eat Raine's cooking...You dont survive.");
             }
+			}
           }
         };
         
