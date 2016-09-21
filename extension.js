@@ -33,7 +33,9 @@
             if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
             if (!bot.commands.executable(this.rank, chat)) return void (0);
             else {
-              API.sendChat("You eat Raine's cooking...You dont survive.");
+			var from = chat.un;
+            var msg = '[@' + from + '] ';
+			return API.sendChat(msg);
             }
           }
         };
