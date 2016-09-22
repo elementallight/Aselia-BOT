@@ -44,7 +44,7 @@
 			var launchT = basicBot.room.roomstats.launchTime;
                         var durationOnline = Date.now() - launchT;
                         var since = basicBot.roomUtilities.msToStr(durationOnline);
-                        var msguptime = subChat(basicBot.chat.activefor, {time: since});
+                        var msguptime = "time:" + since + "!";
                         API.sendChat(msguptime);
             }
           }
