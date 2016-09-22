@@ -15,6 +15,15 @@
 
         // Load custom settings set below
         bot.retrieveSettings();
+        retrieveFromStorage();
+            window.bot = basicBot;
+            basicBot.roomUtilities.updateBlacklists();
+            setInterval(basicBot.roomUtilities.updateBlacklists, 60 * 60 * 1000);
+            basicBot.getNewBlacklistedSongs = basicBot.roomUtilities.exportNewBlacklistedSongs;
+            basicBot.logNewBlacklistedSongs = basicBot.roomUtilities.logNewBlacklistedSongs;
+            if (basicBot.room.roomstats.launchTime === null) {
+                basicBot.room.roomstats.launchTime = Date.now();
+            }
 
         //Extend the bot here, either by calling another function or here directly.
 
